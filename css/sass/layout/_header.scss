@@ -1,0 +1,83 @@
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid $greyColor;
+  overflow: hidden;
+  .logo {
+    width: 30%;
+    float: $float-left;
+    @media #{$minSmall} {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+    @media #{$minMedium} {
+      width: 30%;
+      float: $float-left;
+      text-align: $text-left;
+    }
+
+    /* added by me*/
+    @media #{$maxMobile} {
+      width: 100%;
+    }
+    /* added by me*/
+    h1 {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    p {
+      color: $greyColor;
+      margin-top: 10px;
+    }
+  }
+  nav {
+    width: 70%;
+    float: $float-left;
+    background-color: $redColor;
+    border-radius: 15px;
+    overflow: hidden;
+    @media #{$minSmall} {
+      display: block !important;
+      width: 100%;
+      float: none;
+      margin-top: 30px;
+    }
+    @media #{$minMedium} {
+      display: block !important;
+      width: 70%;
+      float: $float-left;
+      margin-top: 1em;
+    }
+    @media #{$maxMobile} {
+      width: 100%;
+      border-radius: 0;
+      display: none;
+    }
+
+    .navbar {
+      width: 100%;
+      li {
+        width: 20%;
+        float: $float-left;
+        font-size: 18px;
+        text-align: center;
+        @media #{$maxMobile} {
+          float: none;
+          width: 100%;
+          text-align: $text-left;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        a {
+          display: block;
+          padding: 20px 10px;
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
+    }
+  }
+}
